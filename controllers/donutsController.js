@@ -25,11 +25,8 @@ router.get('/:id', (req, res)=>{
 })
 
 router.post('/', (req, res)=>{
-    if(req.body.tasty === "on"){
-        req.body.tasty = true;
-    }else{
-        req.body.tasty = false
-    }
+    console.log("MAKING THE DONUTS")
+    console.log(req.body);
     Donut.create(req.body, (err, newDonut)=>{
         if(err){
             console.log(err);

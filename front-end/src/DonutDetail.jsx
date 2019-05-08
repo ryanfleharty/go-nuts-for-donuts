@@ -9,7 +9,9 @@ const DonutDetail = (props) => {
             :
             <p>And its GROSS YUCK</p>
         }
-        
+        <button onClick={()=>{
+            props.deleteDonut(props.donut._id)
+        }}>THROW THIS DONUT AWAAAY</button>
         </div>
 }
 
