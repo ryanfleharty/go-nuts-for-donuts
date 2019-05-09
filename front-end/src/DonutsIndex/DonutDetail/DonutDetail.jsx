@@ -1,4 +1,6 @@
 import React from 'react';
+import EditDonut from './EditDonut/EditDonut';
+import { Button } from 'reactstrap'
 
 const DonutDetail = (props) => {
     return <div>
@@ -9,9 +11,10 @@ const DonutDetail = (props) => {
             :
             <p>And its GROSS YUCK</p>
         }
-        <button onClick={()=>{
+        <Button color="primary" onClick={()=>{
             props.deleteDonut(props.donut._id)
-        }}>THROW THIS DONUT AWAAAY</button>
+        }}>THROW THIS DONUT AWAAAY</Button>
+        <EditDonut updateDonut = {props.updateDonut} donut={props.donut}></EditDonut>
         </div>
 }
 
